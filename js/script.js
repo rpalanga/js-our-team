@@ -67,10 +67,11 @@ for (let i=0; i < worker.length; i++){
 
         console.log(key + ": " + workerElement[key])
         
-        printElement += `${key}: ${workerElement[key]}, `;
+        printElement += `${key}:  ${workerElement[key]} <br>`;
     }
 
-    listElement.innerHTML += `<li> ${printElement} <br> </li> <br> `;
+    listElement.innerHTML += `<li> ${printElement} </li> <br> `;
 }
+
 
 
