@@ -54,12 +54,23 @@ const worker = [
 
 console.log(worker)
 
+const listElement = document.querySelector("ul")
+
 for (let i=0; i < worker.length; i++){
 
-    console.log(worker[i])
+    // console.log(worker[i])
     let workerElement = worker[i];
+
+    let printElement = "";
     
-    for ( key in workerElement){
-        console.log( key + ": " + workerElement[key])
+    for (let key in workerElement){
+
+        console.log(key + ": " + workerElement[key])
+        
+        printElement += `${key}: ${workerElement[key]}, `;
     }
+
+    listElement.innerHTML += `<li> ${printElement} <br> </li> <br> `;
 }
+
+
