@@ -28,7 +28,7 @@ const worker = [
     {
         name:"Angela Caroll",
         task:"Chief Editor",
-        img:"angela-carrol-chief-editor.jpg",
+        img:"angela-caroll-chief-editor.jpg",
     },
     {
         name:"Walter Gordon",
@@ -54,24 +54,68 @@ const worker = [
 
 console.log(worker)
 
-const listElement = document.querySelector("ul")
+
+
+
+// const listElement = document.querySelector("ul")
+const listElement = document.querySelectorAll(".col-4 .card");
+
+
 
 for (let i=0; i < worker.length; i++){
 
-    // console.log(worker[i])
+    
+    // qui prende gli elementi dell'array
     let workerElement = worker[i];
 
-    let printElement = "";
+    let cardElement = listElement[i];
+
+    let userWorker = cardElement.querySelector(".workerName");
+
+    let taskWorker = cardElement.querySelector(".workerRole");
+
+    let imgWorker = cardElement.querySelector(".card-img-top");
     
-    for (let key in workerElement){
 
-        console.log(key + ": " + workerElement[key])
-        
-        printElement += `${key}:  ${workerElement[key]} <br>`;
-    }
 
-    listElement.innerHTML += `<li> ${printElement} </li> <br> `;
+
+    
+
+
+    
+  userWorker.innerHTML = workerElement.name
+  taskWorker.innerHTML = workerElement.task
+  imgWorker.src = `img/${workerElement.img}`
 }
 
 
 
+
+
+// listElement.innerHTML += `<li> ${printElement} </li> <br> `;
+
+/*
+
+        // for (let obj in printElement){
+
+        //     console.log(obj + ": " + printElement["name"])
+
+        //     specificElement += `${obj} : ${printElement["name"]}`
+
+        //     console.log(specificElement["name"])
+        // }
+
+*/
+/*
+
+  // for (let key in workerElement){
+    //     // qui gli oggetti dell'array
+
+    //     console.log(key + ": " + workerElement[key])
+        
+    //     printElement += `${key}:  ${workerElement[key]} <br>`;
+
+        
+    // }
+
+    */
